@@ -1,0 +1,13 @@
+Write a script called simple-useradd.sh that adds a local user to the system. This script should:
+
+Take only one argument, or else exit after printing a usage message.
+
+Check /etc/passwd and decide on the first free user ID. Print a message containing this ID.
+
+Create a private group for this user, checking the /etc/group file. Print a message containing the group ID.
+
+Gather information from the operator user: a comment describing this user, choice from a list of shells (test for acceptability, else exit printing a message), expiration date for this account, extra groups of which the new user should be a member.
+
+With the obtained information, add a line to /etc/passwd, /etc/group and /etc/shadow; create the user's home directory (with correct permissions!); add the user to the desired secondary groups.
+
+Set the password for this user to a default known string.
